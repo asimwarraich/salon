@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "El Messiri", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+.salon__nav__bar__container {
+  background-color: black;
+  padding: 0.6em 3em;
+}
+.salon__maon__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.salon__nav__bar__container__logo img {
+  height: 70px;
+}
+.salon__nav__contant__links {
+  padding: 1em;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+}
+.salon__nav__contant__links:hover {
+  background-color: #4c7346;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.salon__nav__bar__button__link {
+  background-color: #4c7346;
+  border: 1px solid #4c7346;
+  padding: 12px 19px;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.salon__nav__bar__button__link:hover {
+  background: transparent;
+  color: #4c7346;
+}
