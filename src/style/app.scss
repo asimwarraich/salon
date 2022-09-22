@@ -12,6 +12,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 .salon__menu__nav {
   display: none;
 }
@@ -23,6 +24,17 @@ body {
   padding: 1em 3em;
   max-width: 1440px;
   margin: 0 auto;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+.salon__nav__bar__container__active {
+  background-color: aliceblue;
+}
+.sooln__logo__div svg {
+  height: 20px;
 }
 .salon__nav__contant__links {
   position: relative;
@@ -45,26 +57,41 @@ body {
   color: white;
   transition: 0.3s ease-in-out;
 }
+
+.salon__nav__bar__button__two {
+  display: none;
+}
+.salon__nav__bar__button__link__two {
+  background-color: white;
+  color: #32572c;
+  font-weight: 600;
+}
 .salon__nav__bar__button__link {
   background-color: #4c7346;
-  // border: 1px solid #4c7346;
   padding: 12px 19px;
-  color: white;
   border-radius: 6px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #32572c;
+  color: white;
 }
 .salon__nav__bar__button__link:hover {
+  border: 1px solid #32572c;
   background: transparent;
-  color: #4c7346;
+  color: #32572c;
+}
+.nav__btn__and__join {
+  display: flex;
+  align-items: center;
 }
 .main__header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2em 0em;
+  padding-top: 7em;
 }
 .header__container__wraper {
   display: flex;
@@ -89,13 +116,17 @@ body {
 .main__header__container__right__contant__heading {
   font-size: 30px;
   font-weight: 600;
-
-  // line-height: 12px;
+  font-family: "El Messiri", sans-serif;
+  line-height: 36px;
 }
 .main__header__container__right__contant__sub__heading {
   font-size: 16px;
   font-weight: 300;
   padding: 6px 0px;
+  width: 85%;
+}
+.main__btn {
+  margin: 24px 0px;
 }
 .main__btn__contant {
   background-color: #4c7346;
@@ -104,9 +135,9 @@ body {
   border: none;
   border-radius: 18px;
   cursor: pointer;
+  text-decoration: none;
 }
 .home__banner__section {
-  // background-color: #295822;
   position: relative;
   width: 100%;
   display: flex;
@@ -128,6 +159,7 @@ body {
 }
 .home__banner__section__right__leave img {
   height: 350px;
+  margin-top: 4.3em;
 }
 .home__section__banner__wraper {
   display: flex;
@@ -148,6 +180,8 @@ body {
 .home__section__banner__wraper__contant__heading {
   font-size: 38px;
   font-weight: 600;
+  line-height: 36px;
+  font-family: "El Messiri", sans-serif;
 }
 .about__home__section {
   width: 100%;
@@ -172,6 +206,7 @@ body {
 .about__home__section__contant__heading {
   font-size: 30px;
   font-weight: 600;
+  font-family: "El Messiri", sans-serif;
 }
 .about__home__section__contant__sub__heading {
   font-size: 18px;
@@ -266,6 +301,213 @@ body {
 .footer__social__links__svg:hover {
   color: #32572c;
 }
+.signup__main__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 6em;
+}
+.signup__main__container__img img {
+  height: 400px;
+}
+.signup__main__container__contant {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0em 2em;
+}
+.signup__heading__bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.signup__heading__img {
+  height: 130px;
+}
+.signup__contant__text__heading {
+  font-size: 38px;
+  font-weight: 600;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup__contant__text__sub__heading {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0.5em 0em;
+}
+.signup__input__form {
+  width: 95%;
+}
+.signup__input__form__container {
+  width: 100%;
+  // padding: 12px 0px;
+  margin: 10px 0px;
+}
+.signup__input__form__container__input {
+  width: 40%;
+  padding: 12px;
+  margin-right: 12px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+}
+.sign__up__btn {
+  width: 100%;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  margin: 12px 0px;
+}
+.main__btn__contant {
+  padding: 0.7em 1em;
+
+  cursor: pointer;
+}
+.signup__alredy {
+  font-size: 16px;
+}
+.signup__alredy__link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #32572c;
+}
+.signin__leave img {
+  height: 300px;
+  margin-left: -3em;
+}
+.signin__container__section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  padding-top: 10em;
+}
+.signin__container__contant {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 2em;
+}
+.signin__container__contant__heading {
+  font-size: 38px;
+  font-weight: 600;
+}
+.signin__container__contant__sub__heading {
+  font-size: 16px;
+  padding: 12px 0px;
+  text-align: center;
+}
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.signin__form__input {
+  width: 100%;
+  margin: 9px 0px;
+  padding: 12px;
+  margin-right: 12px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+}
+.signin__container__img img {
+  height: 400px;
+}
+.booking__wraper {
+  padding-top: 4em;
+  width: 100%;
+  position: relative;
+}
+.booking__wraper__img img {
+  width: 100%;
+  height: 350px;
+}
+.booking__wraper__overlay__card {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.booking__overlay__card {
+  padding: 1em;
+  background-color: #6fa66b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+}
+.booking__wraper__overlay__card__svg svg {
+  height: 60px;
+  margin: 0px 16px;
+}
+.booking__wraper__overlay__card__text {
+  font-size: 22px;
+  font-weight: 500;
+  width: 40%;
+}
+.services__section__heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "El Messiri", sans-serif;
+  padding: 1em 0em;
+}
+.services__section__container {
+  width: 100%;
+
+  padding-top: 2em;
+}
+.services__section__container__svg {
+  position: relative;
+}
+.services__section__container__svg svg {
+  height: 550px;
+  margin-left: -4em;
+}
+.services__left__leave {
+  position: absolute;
+  top: 0;
+}
+.services__left__leave img {
+  height: 400px;
+  margin-left: -3.5em;
+}
+
+@media (max-width: 1200px) {
+  .header__right__leave img {
+    height: 250px;
+  }
+  .header__left__leave img {
+    height: 330px;
+  }
+}
 @media (max-width: 1000px) {
   .home__banner__section__right__leave img {
     display: none;
@@ -280,7 +522,15 @@ body {
     height: 200px;
   }
 }
+@media (max-width: 850px) {
+  .signup__contant__text__heading {
+    width: 75%;
+  }
+}
 @media (max-width: 900px) {
+  .signup__main__container__img img {
+    height: 300px;
+  }
   .about__home__section {
     flex-direction: column;
   }
@@ -288,11 +538,13 @@ body {
     align-items: center;
   }
   .salon__menu__nav {
+    display: none;
     display: flex;
     border-radius: 4px;
     background-color: #32572c;
     padding: 8px;
     border: none;
+    margin: 0px 12px;
     cursor: pointer;
   }
   .salon__nav__contant__links {
@@ -304,16 +556,7 @@ body {
     top: 4em;
     right: 1em;
     border-radius: 12px;
-
     padding: 12px;
-  }
-  .salon__nav__bar__button__link {
-    background-color: aliceblue;
-    color: #4c7346;
-    border: 1px solid white;
-  }
-  .salon__nav__bar__button__link:hover {
-    color: white;
   }
 }
 @media (max-width: 950px) {
@@ -324,10 +567,13 @@ body {
     width: 100%;
   }
   .home__banner__section::before {
-    bottom: 0em;
+    bottom: -2em;
   }
 }
 @media (max-width: 750px) {
+  .signup__contant__text__heading {
+    font-size: 28px;
+  }
   .home__section__banner__wraper__contant__heading {
     font-size: 28px;
     text-align: center;
@@ -343,6 +589,22 @@ body {
   }
 }
 @media (max-width: 650px) {
+  .signup__main__container__img img {
+    margin-left: -4em;
+  }
+  .signup__main__container {
+    flex-direction: column;
+  }
+  .signup__contant__text__heading {
+    width: 100%;
+    font-size: 22px;
+  }
+  .signup__contant__text__sub__heading {
+    padding: 0em;
+  }
+  .signup__contant__text__sub__heading {
+    text-align: start;
+  }
   .footer__container__wraper__overlay__contant {
     top: 4%;
   }
@@ -365,10 +627,20 @@ body {
     display: none;
   }
   .home__section__banner__wraper__img img {
-    margin-left: 0em;
+    margin-left: -3em;
   }
 }
 @media (max-width: 500px) {
+  .salon__nav__bar__button__two {
+    display: flex;
+  }
+  .salon__nav__bar__button {
+    display: none;
+  }
+  .signup__input__form__container__input {
+    width: 90%;
+    margin: 9px 0px;
+  }
   .footer__wraper__contact__link__mail {
     width: 51%;
     border: none;
@@ -385,7 +657,8 @@ body {
     height: 250px;
   }
   .about__home__section__contant__heading {
-    font-size: 22px;
+    font-size: 26px;
+    font-weight: 600;
   }
   .about__home__section__contant__sub__heading {
     font-size: 16px;

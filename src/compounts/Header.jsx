@@ -1,8 +1,10 @@
 import React, { useLayoutEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(true);
+  const [isScrolling, setIsScrolling] = React.useState(false);
   function checkNavOpenClose() {
     if (window.innerWidth < 900) {
       setIsOpen(false);
@@ -13,11 +15,25 @@ export default function Header() {
   useLayoutEffect(() => {
     checkNavOpenClose();
     window.addEventListener("resize", checkNavOpenClose);
+    window.addEventListener("scroll", () => {
+      checkNavOpenClose();
+      if (window.scrollY > 0) {
+        setIsScrolling(true);
+      } else {
+        setIsScrolling(false);
+      }
+    });
   }, []);
 
   return (
     <>
-      <div className="salon__nav__bar__container">
+      <div
+        className={
+          isScrolling
+            ? " salon__nav__bar__container salon__nav__bar__container__active"
+            : "salon__nav__bar__container"
+        }
+      >
         <div className="sooln__logo__div">
           <svg
             width="206"
@@ -41,8 +57,8 @@ export default function Header() {
             }}
           >
             <div className="salon__nav__contant__links">
-              <a
-                href="#"
+              <NavLink
+                to="/"
                 onclick={() => {
                   if (window.innerWidth < 900) {
                     setIsOpen(false);
@@ -51,37 +67,48 @@ export default function Header() {
                 className="sign__nav__link"
               >
                 Home
-              </a>
-              <a href="#" className="sign__nav__link">
+              </NavLink>
+              <NavLink to="/aboutus" className="sign__nav__link">
                 About Us
-              </a>
-              <a href="#" className="sign__nav__link">
+              </NavLink>
+              <NavLink to="/review" href="#" className="sign__nav__link">
                 Reviews
-              </a>
-              <a href="#" className="sign__nav__link">
+              </NavLink>
+              <NavLink to="/contactus" className="sign__nav__link">
                 Contact us
-              </a>
-              <div className="salon__nav__bar__button">
-                <button className="salon__nav__bar__button__link">
+              </NavLink>
+              <div className="salon__nav__bar__button__two">
+                <NavLink
+                  to="/signup"
+                  className="salon__nav__bar__button__link__two"
+                >
                   Join Now
-                </button>
+                </NavLink>
               </div>
             </div>
           </OutsideClickHandler>
         ) : null}
-        <button
-          className="salon__menu__nav"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-          title="menu"
-        >
-          {isOpen ? (
-            <Close size="24" color="white" />
-          ) : (
-            <Menu size="24" color="white" />
-          )}
-        </button>
+
+        <div className="nav__btn__and__join">
+          <button
+            className="salon__menu__nav"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            title="menu"
+          >
+            {isOpen ? (
+              <Close size="24" color="white" />
+            ) : (
+              <Menu size="24" color="white" />
+            )}
+          </button>
+          <div className="salon__nav__bar__button">
+            <NavLink to="/signup" className="salon__nav__bar__button__link">
+              Join Now
+            </NavLink>
+          </div>
+        </div>
       </div>
     </>
   );
