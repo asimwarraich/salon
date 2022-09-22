@@ -16,7 +16,14 @@ export default function Footer() {
             <img src={footerleave} alt="footerleave" />
           </div>
           <div className="footer__container__wraper__overlay__contant">
-            <div className="footer__container__wraper__overlay__contant__heading">
+            <div
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
+              className="footer__container__wraper__overlay__contant__heading"
+            >
               SALOON <span>SERVICES</span>
             </div>
             <div className="footer__container__wraper__overlay__contant__sub__heading">

@@ -5,16 +5,25 @@ import bannerleftleave from "../imgs/bannerleftleave.png";
 export default function SlonBanner() {
   return (
     <>
-      <div
-        data-aos="fade-up"
-        data-aos-delay="10"
-        className="home__banner__section"
-      >
+      <div className="home__banner__section">
         <div className="home__banner__section__left__leave">
           <img src={bannerleftleave} alt="banner" />
         </div>
-        <div className="home__section__banner__wraper">
-          <div className="home__section__banner__wraper__contant">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="70"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
+          className="home__section__banner__wraper"
+        >
+          <div
+            data-aos="fade-right"
+            data-aos-delay="40"
+            data-aos-duration="1800"
+            data-aos-easing="ease-in"
+            className="home__section__banner__wraper__contant"
+          >
             <div className="home__section__banner__wraper__contant__heading">
               An Atmosphere of serenity & Comfort
             </div>
