@@ -6,6 +6,7 @@ import Signup from "./screens/Signup";
 import Signin from "./screens/Signin";
 import Booking from "./screens/Booking";
 import Aboutus from "./screens/Aboutus";
+import Contactus from "./screens/Contactus";
 import aos from "aos";
 import "aos/dist/aos.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="aboutus" element={<Aboutus />} />
+        <Route path="contactus" element={<Contactus />} />
       </Routes>
     </BrowserRouter>
   );
