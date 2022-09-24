@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import SalonBanner from "../compounts/SlonBanner";
 import AboutSalon from "../compounts/AboutSalon";
 import footerleave from "../imgs/footerleave.png";
+import service from "../imgs/service.png";
 
 export default function Home() {
   return (
@@ -67,6 +68,85 @@ export default function Home() {
             </svg>
             <div className="services__left__leave">
               <img src={footerleave} alt="leave" />
+            </div>
+            <div className="services__main__entry__wraper">
+              <div
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="70"
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                className="services__left__entryies"
+              >
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">sauna</div>
+                </div>
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">
+                    whirlpool
+                  </div>
+                </div>
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">suuna</div>
+                </div>
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">
+                    jet bath
+                  </div>
+                </div>
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">
+                    steam room
+                  </div>
+                </div>
+                <div className="services__signal__radio__entry">
+                  <div className="service__input__entry">
+                    <input type="radio" label="suna" name="service" />
+                  </div>
+                  <div className="service__signal__entry__contant">massage</div>
+                </div>
+              </div>
+              <div className="services__right__contant">
+                <div className="services__right__contant__img">
+                  <img src={service} alt="img" />
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-offset="200"
+                  data-aos-delay="70"
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                  className="services__overlay__wraper"
+                >
+                  <div className="services__right__contant__heading__overlay">
+                    SUNNA
+                  </div>
+                  <div className="services__right__contant__heading">SUNNA</div>
+                  <div className="services__right__contant__sub__heading">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Repudiandae, ipsa! Expedita tempora praesentium dicta
+                    cumque.
+                  </div>
+                  <div className="book__now__btn">
+                    <button className="main__btn__contant">Book Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
